@@ -1,15 +1,20 @@
 <!DOCTYPe html>
 <html lang="en">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="Script.JS"></script>
+
 <head>
     <title>Home Page </title>
 </head>
 
   <body>
-
-    
-
-</body>
+    <div style="position: relative;">
+    <input style="position: absolute; top: 50%; left: 50%;" id="fuzzySearch" type="text" placeholder="Example fuzzy Search" onkeyup="fuzzySearch(this)">
+    <ol id="sugestoins" style="position: absolute; top: 90%; left: 50%;">
+    </ol>
+      </div>
+  </body>
 </html>
