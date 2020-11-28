@@ -10,11 +10,21 @@
     <title>Home Page </title>
 </head>
 
+
+<style>
+#dropDown {
+  background-color:wheat;
+}
+</style>
+
   <body>
-    <div style="position: relative;">
-    <input style="position: absolute; top: 50%; left: 50%;" id="fuzzySearch" type="text" placeholder="Example fuzzy Search" onkeyup="fuzzySearch(this)">
-    <ol id="sugestoins" style="position: absolute; top: 90%; left: 50%;">
-    </ol>
+
+    <div style="height: 10%;">
+    <input id="fuzzySearch" type="text" placeholder="Example fuzzy Search" onkeyup="fuzzySearch(this)">
+    <div id="dropDown" style="position: absolute;">
+    </div>
       </div>
+    <div style="height: auto;">
+    </div>
   </body>
 </html>
