@@ -1,8 +1,44 @@
 /* main style sheet for Site */
 body {
   padding-top: 5rem;
+  background-color: antiquewhite;
 }
-.starter-template {
-  padding: 3rem 1.5rem;
+.search {
+  text-align: left;
+  width: 20%;
+  min-width: 200px;
+}
+
+
+.moonButton{
+background-color: transparent; 
+border: none;
+cursor: pointer;
+}
+
+.dropDown {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  min-height:600px;
+  position: relative;
+}
+
+.result  {
+  position: relative;
+  left: 43px;
+  text-align: left;
+  width: 20%;
+  min-width: 200px;
+  margin: 0 auto;
+  border-style: none;
+  background-color: white;
+}
+
+.result:hover{
+  background-color: lightblue;
+}
+
+#searchdiv{
   text-align: center;
 }

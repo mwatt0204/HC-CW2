@@ -7,7 +7,8 @@ function fuzzySearch(x){
     for(i=0; i< lib.length; i++){
      if(lib[i].includes(x.value)){
  //        alert("yes");
-         li = document.createElement('a');
+         li = document.createElement('button');
+         li.className = "result"
          brake = document.createElement('br');
          word = document.createTextNode(lib[i]);
          li.appendChild(word);
