@@ -17,4 +17,11 @@ function fuzzySearch(x){
      }
      }
     }
+
+
+
+function getLectueres(){
+    
+}
+
 }
