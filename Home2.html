@@ -17,43 +17,65 @@
     <!-- Custom styles for this template -->
     <link href="MainStyleSheet.css" rel="stylesheet">
 
-
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="Script.JS"></script>
 
   </head>
 
   <body >
 
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="nav-link" href="#"><img class="logo" src="ueaLogo.png" alt="UEA Logo" height="30"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">UEA Logo</a>
-      <button class="navbar-toggler" type="button">
-      MENU  
-     <span class="navbar-toggler-icon"></span>
-      </button>
-      <button class="moonButton" data-toggle="tooltip" data-placment="bottom" title="toggal dark mode" type="button">
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/>
-        </svg>
-        <span></span>
-      </button>
- 
-       </nav>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">COVID-19</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Find Lecturer</a>
+          </li>
+        </ul>
+        <button class="moonButton" data-toggle="tooltip" data-placment="bottom" title="toggal dark mode" type="button">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/>
+          </svg>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+    
+   
 
 
     <main role="main" class="container">
 
-      <div id = "searchdiv">
+
+
+      <div id = "searchdiv" class="form-control mx-sm-3">
         
-        SERACH  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
         <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
         </svg>
-          <input class="search" id="fuzzySearch" type="text" placeholder="Search" aria-label="Search"  onkeyup="fuzzySearch(this)">
-          <div id="dropDown">
-          </div>
+        <input class="search" id="fuzzySearch" type="text" placeholder="Search" aria-label="Search"  onkeyup="fuzzySearch(this)">
+        <div id="dropDown">
         </div>
-
+      </div>
+      <div class="container" id="buttons" style="text-align: center">
+          <button type="button" class="btn btn-primary" id = "blackboardButton">Blackboard</button>
+          <button type="button" class="btn btn-primary" id = "evisionButton">E-Vision</button>
+          <button type="button" class="btn btn-primary" id = "officeButton">Office 365</button>
+          <button type="button" class="btn btn-primary" id = "covidButton">COVID-19</button>
+        </div>
+      </div>
     </main><!-- /.container -->
 
     <!-- Bootstrap core JavaScript
