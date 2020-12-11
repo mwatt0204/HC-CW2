@@ -37,6 +37,7 @@ function getLectueres(){
         coloum.appendChild(document.createTextNode(lecture[r][c]))
         row.appendChild(coloum)
     }
+    
     table.appendChild(row)
    }
 }
