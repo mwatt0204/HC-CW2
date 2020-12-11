@@ -24,10 +24,14 @@ function fuzzySearch(x){
 
 
 function getLectueres(){    
+    alert("ran")
   table = document.getElementById("tab");
-  table.innerHTML= "  <th>Lecture</th> <th>School</th> <th>Email</th> <th>Office</th>";
+  table.innerHTML= "";
   for(r=0; r< lecture.length; r++){
     row = document.createElement('tr');
+    header = document.createElement('th');
+    header.appendChild(document.createTextNode(r))
+    header.scope = "row";
     for(c = 0; c < 4; c++){
         coloum = document.createElement('td');
         coloum.appendChild(document.createTextNode(lecture[r][c]))
