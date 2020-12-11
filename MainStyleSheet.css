@@ -5,8 +5,8 @@ body {
 }
 .search {
   text-align: left;
-  width: 20%;
-  min-width: 200px;
+  width: 40%;
+  margin-top: auto;
 }
 
 
@@ -20,25 +20,64 @@ cursor: pointer;
   display: block;
   margin: 0 auto;
   text-align: left;
-  min-height:600px;
   position: relative;
+  height: 10%;
+  width: auto;
 }
 
 .result  {
   position: relative;
-  left: 43px;
   text-align: left;
-  width: 20%;
-  min-width: 200px;
+  align-items: left;
   margin: 0 auto;
   border-style: none;
   background-color: white;
+  align-items: left;
 }
 
 .result:hover{
   background-color: lightblue;
 }
 
-#searchdiv{
+
+img.logo {
+  max-height: 50px;
+  width: auto;
+}
+
+#searchdiv {
   text-align: center;
+}
+
+.search {
+  min-width: 80%;
+}
+
+#buttons {
+  padding-top: 50px;
+  width: 80%;
+}
+
+#blackboardButton {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
+}
+
+#evisionButton {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
+}
+
+#officeButton {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
+}
+
+#covidButton {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
 }
