@@ -46,13 +46,15 @@ img.logo {
 }
 
 #searchdiv {
-  text-align: center;
+  text-align: left;
+  align-items: left;
 }
 
-.search {
-  min-width: 90%;
+#fuzzySearch {
+  min-width: 80%;
   align-items: right;
 }
+
 
 #buttons {
   padding-top: 50px;
@@ -105,4 +107,9 @@ img.logo {
 
 .card {
   margin-bottom: 7px;
+}
+
+.moonButton {
+  margin-left: 10px;
+  margin-top: 5px;
 }
