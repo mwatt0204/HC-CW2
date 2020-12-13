@@ -1,7 +1,7 @@
 /* main style sheet for Site */
 body {
   padding-top: 5rem;
-  background-color: antiquewhite;
+  background-color: gray;
 }
 .search {
   text-align: left;
@@ -80,4 +80,16 @@ img.logo {
   padding-top: 5px;
   margin:5px;
   min-width: 105px;
+}
+
+#campusMapButton {
+  margin: 10px;
+}
+
+#findLecturerButton {
+  margin: 10px;
+}
+
+#covidButton {
+  margin: 10px;
 }
