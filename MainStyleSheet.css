@@ -1,12 +1,15 @@
 /* main style sheet for Site */
 body {
   padding-top: 5rem;
+
   background-color: gray;
+
 }
 .search {
   text-align: left;
   width: 40%;
   margin-top: auto;
+  background-color: white;
 }
 
 
@@ -31,7 +34,7 @@ cursor: pointer;
   align-items: left;
   margin: 0 auto;
   border-style: none;
-  background-color: white;
+  background-color: gray;
   align-items: left;
 }
 
