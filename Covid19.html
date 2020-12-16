@@ -26,8 +26,7 @@
 
   </head>
 
-  <body onload="checkDate()">
-
+  <body onload="showAvailableDates()"> 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <a class="nav-link" href="Home2.html"><img class="logo" src="ueaLogo.png" alt="UEA Logo" height="30"></a>
@@ -80,7 +79,7 @@
             <img src="covid19Image.png" class="img-fluid" alt="COVID-19 Syptoms" Align="center">
 </div>
 
-
+<!--
 <div class="container">
 <form>
   <div class="form-group row">
@@ -127,6 +126,24 @@
   </div>
 </form>
 </div>
+-->
+
+
+
+<div class="container">
+  <input type="text"> <br>
+  <label>Email</label>
+   <input type="email"> <br>
+   <label> Select Form availble Dates </label>
+   <input type="date" id="datefiled" min="2020-12-22" max="2020-12-23" onchange="showAvailableDates()"> <br>
+   <select class="custom-select mr-sm-2" id="times" disabled>
+     <option id="placeholdertextforTime" selected>No Slots availble On Selected Date. Please Select a Free date first</option>
+     <option value="1">09:50</option>
+     <option value="2">12:40</option>
+     <option value="3">15:30</option>
+   </select>
+<button class="btn btn-primary" data-toggle="modal" data-target="#bookTest" onclick="simulateLoading()">Book Test Now</button>  
+</div>
 
 
 
@@ -135,16 +152,28 @@
 
 
 
+ <!-- Modal -->
+ <div class="modal fade" id="bookTest" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+       <img src="loading.gif" alt="loadingICon" Align="center" width="95%">
+      </div>
+      <div class="modal-footer">
+        Please dont close this window
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 
 
 
+    <button hidden type="button" id="closeLoading" class="btn btn-primary" data-toggle="modal" data-target="#bookTest">
 
-
-
-    <button hidden type="button" id="test" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    <button hidden type="button" id="BookedTest" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalCenter">
         Launch demo modal
       </button>
       
