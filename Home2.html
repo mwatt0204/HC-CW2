@@ -45,7 +45,11 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <div id = "topSearch">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onkeyup="fuzzySearch2(this)">
+           <div id="dropDown2">
+          </div>
+          </div>
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         <button class="moonButton" data-toggle="tooltip" data-placment="bottom" title="toggal dark mode" type="button">
@@ -72,7 +76,8 @@
         <div id="dropDown">
         </div>
       </div>
-
+ 
+      
       <div class="container" id="buttons" style="text-align: left">
 
 
