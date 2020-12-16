@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Home</title>
+    <title>My Dashboard</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
@@ -28,6 +28,7 @@
 
   <body >
 
+    
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <a class="nav-link" href="#"><img class="logo" src="ueaLogo.png" alt="UEA Logo" height="30"></a>
@@ -36,17 +37,59 @@
       </button>
     
       <div class="collapse navbar-collapse" id="myNavbar">
+
+        
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">COVID-19</a>
+            <a class="nav-link" href="#">UEA Vaccines</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Find Lecturer</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              News
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Latest News</a>
+              <a class="dropdown-item" href="#">Staff</a>
+              <a class="dropdown-item" href="#">Student</a>
+              <a class="dropdown-item" href="#">Notices</a>
+            </div>
           </li>
-        </ul>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            COVID-19
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="#">Book a Test</a>
+            <a class="dropdown-item" href="#">How lateral testing works</a>
+            <a class="dropdown-item" href="#">Travelling after testing</a>
+            <a class="dropdown-item" href="#">Lateral Testing FAQs</a>
+            <a class="dropdown-item" href="#">Frequently Asked Questions</a>
+            <a class="dropdown-item" href="#">Step-by-btep guides</a>
+            <a class="dropdown-item" href="#">Consent Stetment</a>
+            <a class="dropdown-item" href="#">Privacy Notice</a>
+            <a class="dropdown-item" href="#">Conmnecting to the VPN</a>
+          </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Help Me With
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Introduction to MY.UEA</a>
+            <a class="dropdown-item" href="#">My Wellbeing</a>
+            <a class="dropdown-item" href="#">Being a New Student</a>
+            <a class="dropdown-item" href="#">Being a New Staff Member</a>
+            <a class="dropdown-item" href="#">Learning</a>
+          </div>
+        </li>
+      </ul>
+
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="navSearch">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="navSearch">Search</button>
         </form>
         <button class="moonButton" data-toggle="tooltip" data-placment="bottom" title="toggal dark mode" type="button">
           <i class="fas fa-moon"></i>
@@ -73,7 +116,7 @@
         </div>
       </div>
 
-      <div class="container" id="buttons" style="text-align: left">
+      
 
 
       <div class="container" id="buttons" style="text-align: left">

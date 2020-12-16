@@ -62,6 +62,12 @@ img.logo {
 #buttons {
   padding-top: 50px;
   min-width: 90%;
+  
+}
+
+#buttons.container {
+  align-content: left;
+  
 }
 
 #blackboardButton {
@@ -115,4 +121,8 @@ img.logo {
 .moonButton {
   margin-left: 10px;
   margin-top: 5px;
+}
+
+#navSearch {
+  margin: 3px;
 }

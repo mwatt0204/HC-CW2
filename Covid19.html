@@ -61,28 +61,24 @@
     <main role="main" class="container">
 
 
-
-      <div id = "searchdiv" class="form-control mx-sm-3">
-        
-          <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
-        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
-        </svg>
-        <input class="search" id="fuzzySearch" type="text" placeholder="Search" aria-label="Search"  onkeyup="fuzzySearch(this)">
-        <div id="dropDown">
-        </div>
-      </div>
-
-
-      
+     
 <div class="container">
   <p class="h3">COVID-19 Symptom Checklist</p>
-            <img src="covid19Image.png" class="img-fluid" alt="COVID-19 Syptoms" Align="center">
+            <img src="covid19ImageNoBackground.png" class="img-fluid" alt="COVID-19 Syptoms" Align="center">
+            <!-- https://credder.com/article/22354/loss-of-smell-and-taste-validated-as-covid-19-symptoms -->
 </div>
 
 
 <div class="container">
+  <p class="h3">Book a Test</p>
 <form>
+  <div class="form-group row">
+    <label for="text" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputText" placeholder="Name">
+    </div>
+  </div>
+    
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
@@ -90,7 +86,7 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputDate3" class="col-sm-2 col-form-label">Date</label>
+    <label form="inputDate3" class="col-sm-2 col-form-label">Date</label>
     <div class="col-sm-10">
       <input type="date" class="dateselect" id="datepicker" placeholder="date" min="2020-12-22" max="2020-12-23" required="required" onchange="checkDate(event)">
     </div>
@@ -115,14 +111,14 @@
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck1">
         <label class="form-check-label" for="gridCheck1">
-          I confirm i dont have any symptons of covid 19 and if i did i would get a nhs test.
+          How we use your booking data: UEA will use any personal data you submit in this form only for the purposes of booking COVID-19 rapid Lateral Flow Tests. Your result will come directly to you and will not be shared with UEA. Our legal basis for processing your data is listed in Article 6(1)(f), because this allows us to process personal data when it’s necessary for the purposes of our legitimate interests. We are using Microsoft as our data processor to provide this booking system. We will not share the personal data you provide unless required by law, and your booking details will be retained only for the duration of the Lateral Flow testing. We have published further information [https://www.uea.ac.uk/about/university-information/statutory-and-legal/data-protection/data-protection-further-information] on how we use your data. By clicking this box you confirm you have understood the above.
         </label>
       </div>
     </div>
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" onclick="BookTest()" class="btn btn-primary">Sign in</button>
+      <button type="submit" onclick="BookTest()" class="btn btn-primary">Book Test</button>
     </div>
   </div>
 </form>
@@ -165,8 +161,8 @@
             <p style="text-align: left;">
             22/12/2020 <br>
             2:40 <br>
-            Locatoin  <br>
-            arive no more than 5 minuits before <br>
+            Location  <br>
+            Please arive no more than 5 minuits before <br>
             
             </p>
             </div>
