@@ -1,12 +1,17 @@
 /* main style sheet for Site */
 body {
   padding-top: 5rem;
+<<<<<<< Updated upstream
   background-color: antiquewhite;
+=======
+  background-color: white;
+>>>>>>> Stashed changes
 }
 .search {
   text-align: left;
   width: 40%;
   margin-top: auto;
+  background-color: white;
 }
 
 
@@ -31,7 +36,7 @@ cursor: pointer;
   align-items: left;
   margin: 0 auto;
   border-style: none;
-  background-color: white;
+  background-color: gray;
   align-items: left;
 }
 
@@ -46,7 +51,13 @@ img.logo {
 }
 
 #searchdiv {
+<<<<<<< Updated upstream
   text-align: center;
+=======
+  text-align: left;
+  align-items: left;
+  background-color: gray;
+>>>>>>> Stashed changes
 }
 
 .search {
