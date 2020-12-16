@@ -25,6 +25,39 @@ function fuzzySearch(x){
 }
 
 
+function enableTabelSearch(){
+
+}
+
+
+function fuzzySearchLeacture(x){
+  table = document.getElementById("TableBody");
+  table.innerHTML= "";
+       if(x.value != ''){
+       for(r=0; r< lecture.length; r++){
+        if(lecture[r][0].toLocaleLowerCase().includes(x.value.toLocaleLowerCase())){
+            row = document.createElement('tr');
+            header = document.createElement('th');
+            header.scope = "row";
+            header.appendChild(document.createTextNode(r));
+            row.appendChild(header);
+            for(c = 0; c < 4; c++){
+                coloum = document.createElement('td');
+                coloum.appendChild(document.createTextNode(lecture[r][c]));
+                row.appendChild(coloum);
+            }
+            table.appendChild(row);
+        }
+        }
+        }
+        else{
+            getLectueres();
+        }
+       }
+   
+   
+   
+
 
 function getLectueres(){    
   table = document.getElementById("TableBody");
