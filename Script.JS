@@ -1,4 +1,4 @@
-var lib =  ["BlackBoard","FindMyLectuer","COVID-19","dogs","fish","words","login","search","glow","game","head","music"];
+var lib =  ["BlackBoard","Find My Lectuer","COVID-19","Campus Map","News","Evisoin","Outlook","Home"];
 
 var lecture = [["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Bart","SCI","anotherEmial@uea.ac.uk","8.234"],]
 
@@ -14,6 +14,21 @@ function fuzzySearch(x){
  //        alert("yes");
          li = document.createElement('button');
          li.className = "result"
+         if(lib[i] == "Find My Lectuer"){
+         li.onclick = function(){
+            location.href = "FindMyLecture.html";
+         }
+        }
+         else if(lib[i] == "COVID-19"){
+            li.onclick = function(){
+                location.href = "Covid19.html";
+         }
+        }
+        else if(lib[i] == "Home"){
+            li.onclick = function(){
+                location.href = "Home2.html";
+         }
+        }
          brake = document.createElement('br');
          word = document.createTextNode(lib[i]);
          li.appendChild(word);
@@ -23,6 +38,48 @@ function fuzzySearch(x){
      }
     }
 }
+
+
+
+function fuzzySearch2(x){
+    list = document.getElementById("dropDown2");
+       list.innerHTML='';
+       if(x.value != ''){
+       for(i=0; i< lib.length; i++){
+        if(lib[i].toLowerCase().includes(x.value.toLowerCase())){
+    //        alert("yes");
+            li = document.createElement('button');
+            li.className = "result"
+            if(lib[i] == "Find My Lectuer"){
+            li.onclick = function(){
+               location.href = "FindMyLecture.html";
+            }
+           }
+            else if(lib[i] == "COVID-19"){
+               li.onclick = function(){
+                   location.href = "Covid19.html";
+            }
+           }
+           else if(lib[i] == "Home"){
+               li.onclick = function(){
+                   location.href = "Home2.html";
+            }
+           }
+            brake = document.createElement('br');
+            word = document.createTextNode(lib[i]);
+            li.appendChild(word);
+            list.appendChild(li);
+            list.appendChild(brake);
+        }
+        }
+       }
+   }
+
+
+
+
+
+
 
 
 function enableTabelSearch(){
