@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Home</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
@@ -17,10 +17,11 @@
     <!-- Custom styles for this template -->
     <link href="MainStyleSheet.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="Script.JS"></script>
 
   </head>
@@ -43,6 +44,10 @@
             <a class="nav-link" href="#">Find Lecturer</a>
           </li>
         </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
         <button class="moonButton" data-toggle="tooltip" data-placment="bottom" title="toggal dark mode" type="button">
           <i class="fas fa-moon"></i>
           <span></span>
@@ -57,9 +62,9 @@
 
 
 
-      <div id = "searchdiv" class="form-control mx-sm-3">
+      <div id = "searchdiv" class="form-control mx-sm-3" style="text-align: left">
         
-          <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
         <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
         </svg>
@@ -67,21 +72,70 @@
         <div id="dropDown">
         </div>
       </div>
-<<<<<<< Updated upstream
-      <div class="container" id="buttons" style="text-align: center">
-          <button type="button" class="btn btn-primary" id = "blackboardButton">Blackboard</button>
-          <button type="button" class="btn btn-primary" id = "evisionButton">E-Vision</button>
-          <button type="button" class="btn btn-primary" id = "officeButton">Office 365</button>
-          <button type="button" class="btn btn-primary" id = "covidButton">COVID-19</button>
-=======
+
+      <div class="container" id="buttons" style="text-align: left">
+
+
       <div class="container" id="buttons" style="text-align: left">
           <button type="button" class="btn btn-primary" id = "blackboardButton"><i class="fas fa-chalkboard-teacher"></i> Blackboard</button>
           <button type="button" class="btn btn-primary" id = "evisionButton"><i class="fas fa-user-graduate"></i> E-Vision</button>
           <button type="button" class="btn btn-primary" id = "officeButton"><i class="fab fa-windows"></i> Office 365</button>
           <button type="button" class="btn btn-danger" id = "covidButton"><i class="fa fa-lungs-virus"></i> COVID-19</button>
->>>>>>> Stashed changes
+
         </div>
       </div>
+      <div class="container" id="buttons" style="text-align: left">
+        <p class="h3">Recently Used</p>
+        <button type="button" class="btn btn-lg" style="background-color:white;" id = "campusMapButton">
+          <i class="fa fa-map-marked-alt"></i> Campus Map
+        </button>
+        <button type="button" class="btn btn-lg" style="background-color:white;" id = "findLecturerButton">
+          <i class="fa fa-university"></i> Find my lecturer
+        </button>
+        <button type="button" class="btn btn-lg" style="background-color:white;" id = "covid">
+          <i class="fa fa-lungs-virus"></i> COVID-19
+        </button>
+      </div>
+      <br>
+      <div class="container" id="buttons" style="text-align: left">
+        <p class="h3">Latest News</p>
+        <section class="row clearfix">
+          <div class="col-sm-4">
+            <div class="card">
+              <img class="card-img-top" src="safetyFirst.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">COVID-19 Update</h5>
+                <p>11 Dec 2020</p>
+                <p class="card-text">Please read for an update on case numbers, a reminder on safety measures and what the University is doing to support students in self-isolation.</p>
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <img class="card-img-top" src="wellbeing.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p>08 Dec 2020</p>
+                <h5 class="card-title">Spotlight on accessing Wellbeing Services</h5>
+                <p class="card-text">Now perhaps more than ever, it’s important that we prioritise our mental health. Read Pharmacy student Arj’s story of accessing Wellbeing services at UEA.</p>
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <img class="card-img-top" src="winter.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p>08 Dec 2020</p>
+                <h5 class="card-title">Winter Warmth launch</h5>
+                <p class="card-text">Now perhaps more than ever, it’s important that we prioritise our mental health. Read Pharmacy student Arj’s story of accessing Wellbeing services at UEA.</p>
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" style="text-align: center; margin: 10px">View all news</a>
+      </div>
+      
     </main><!-- /.container -->
 
     <!-- Bootstrap core JavaScript

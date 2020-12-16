@@ -10,7 +10,7 @@ function fuzzySearch(x){
     list.innerHTML='';
     if(x.value != ''){
     for(i=0; i< lib.length; i++){
-     if(lib[i].includes(x.value)){
+     if(lib[i].toLowerCase().includes(x.value.toLowerCase())){
  //        alert("yes");
          li = document.createElement('button');
          li.className = "result"

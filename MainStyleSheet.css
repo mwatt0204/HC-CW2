@@ -1,11 +1,9 @@
 /* main style sheet for Site */
 body {
   padding-top: 5rem;
-<<<<<<< Updated upstream
-  background-color: antiquewhite;
-=======
-  background-color: white;
->>>>>>> Stashed changes
+
+  background-color: gray;
+
 }
 .search {
   text-align: left;
@@ -51,22 +49,19 @@ img.logo {
 }
 
 #searchdiv {
-<<<<<<< Updated upstream
-  text-align: center;
-=======
   text-align: left;
   align-items: left;
-  background-color: gray;
->>>>>>> Stashed changes
 }
 
-.search {
+#fuzzySearch {
   min-width: 80%;
+  align-items: right;
 }
+
 
 #buttons {
   padding-top: 50px;
-  width: 80%;
+  min-width: 90%;
 }
 
 #blackboardButton {
@@ -91,4 +86,33 @@ img.logo {
   padding-top: 5px;
   margin:5px;
   min-width: 105px;
+}
+
+#campusMapButton {
+  margin: 10px;
+  margin-left: 0px;
+}
+
+#findLecturerButton {
+  margin: 10px;
+  margin-left: 0px;
+}
+
+#covid {
+  margin: 10px;
+  margin-left: 0px;
+}
+
+.h3 {
+  text-align: centre;
+  padding-bottom: 10px;
+}
+
+.card {
+  margin-bottom: 7px;
+}
+
+.moonButton {
+  margin-left: 10px;
+  margin-top: 5px;
 }
