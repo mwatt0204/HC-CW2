@@ -15,8 +15,6 @@ var lib =  ["BlackBoard","Find My Lectuer","COVID-19","Campus Map","News","Evisi
 var lecture = [["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Lisa","SCI","anotherEmial@uea.ac.uk","8.234"],["Edwin","CMP","dansemail@uea.ac.uk","2.07"],["somePerson","CMP","someempail@uea.ac.uk","8.94"],["Bart","SCI","anotherEmial@uea.ac.uk","2.29"]["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Lisa","SCI","anotherEmial@uea.ac.uk","8.234"],["Edwin","CMP","dansemail@uea.ac.uk","2.07"],["somePerson","CMP","someempail@uea.ac.uk","8.94"],["Bart","SCI","anotherEmial@uea.ac.uk","2.29"]["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Lisa","SCI","anotherEmial@uea.ac.uk","8.234"],["Edwin","CMP","dansemail@uea.ac.uk","2.07"],["somePerson","CMP","someempail@uea.ac.uk","8.94"],["Bart","SCI","anotherEmial@uea.ac.uk","2.29"]["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Lisa","SCI","anotherEmial@uea.ac.uk","8.234"],["Edwin","CMP","dansemail@uea.ac.uk","2.07"],["somePerson","CMP","someempail@uea.ac.uk","8.94"],["Bart","SCI","anotherEmial@uea.ac.uk","2.29"]]
 
 
-
-
 function fuzzySearch(x){
     fuzzyItems = 0;
     list = document.getElementById("dropDown");
