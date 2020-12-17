@@ -39,7 +39,16 @@ function fuzzySearch(x){
     }
 }
 
+function togglecss(){
+  var a = document.getElementById("style1");
+  a.x = 'MainStyleSheet' == a.x ? 'DarkMOdeStyleSheet' : 'MainStyleSheet'; // short if
+  a.href = a.x + '.css';
+}
 
+
+function test(){
+    alert("test");
+}
 
 function fuzzySearch2(x){
     list = document.getElementById("dropDown2");
@@ -81,10 +90,34 @@ function fuzzySearch2(x){
 
 
 
-
-function enableTabelSearch(){
+function simulateLoading(){
+    setTimeout(function(){
+        document.getElementById("closeLoading").click();
+        document.getElementById("BookedTest").click();
+    } ,4000)
 
 }
+
+
+
+function showAvailableDates(){
+
+    times = document.getElementById("times");
+    testDate = new Date("2020-12-22");
+    testDate2 = new Date("2020-12-23");
+    date = document.getElementById("datefiled").value;
+    date2 = new Date(date);
+    if(date2.getTime() == testDate.getTime() || date2.getTime() == testDate2.getTime()){
+        times.disabled = false;
+        document.getElementById("placeholdertextforTime").innerHTML ="Please Select a avalibal Time";
+    }
+    else{
+     document.getElementById("times").disabled = true;
+     document.getElementById("placeholdertextforTime").innerHTML ="No times Avalibale on Selected Dates";
+     times.value = "No times Avalibale on Selected Dates";
+    
+    }
+ }
 
 
 function fuzzySearchLeacture(x){
