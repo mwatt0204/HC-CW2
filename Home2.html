@@ -88,8 +88,11 @@
       </ul>
 
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="navSearch">
+         <div id="topSearch">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="navSearch" onkeyup="fuzzySearch2(this)">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="navSearch">Search</button>
+        <div id="dropDown2"></div> 
+        </div>
         </form>
         <button class="moonButton" data-toggle="tooltip" data-placment="bottom" title="toggal dark mode" type="button">
           <i class="fas fa-moon"></i>

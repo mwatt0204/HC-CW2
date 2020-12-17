@@ -105,7 +105,7 @@ function showAvailableDates(){
      times.value = "No times Avalibale on Selected Dates";
     
     }
-}
+ }
 
 
 function fuzzySearchLeacture(x){
