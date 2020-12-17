@@ -148,14 +148,29 @@ function showAvailableDates(){
 
 
 function fuzzySearchLeacture(x){
-    
-    sortedLecturers = [];
-    for(r=0; r< lecture.length; r++){
-        if(lecture[r][0].toLocaleLowerCase().includes(x.value.toLocaleLowerCase())){
-        sortedLecturers.push(lecture[r]);
-        }
+    table = document.getElementById("TableBody");
+  table.innerHTML= "";
+  for(r=0; r< lecture.length; r++){
+    if(lecture[r][0].toLowerCase().includes(x.value.toLowerCase())){
+    row = document.createElement('tr');
+    row.className = "forceWhite";
+    if(lecture[r][0] == "Dan Smith"){
+        row.onclick = function(){
+           bttn = document.getElementById("test");
+           bttn.click();
+        };
     }
-        updateLectures(sortedLecturers);
+    header = document.createElement('th');
+
+    for(c = 0; c < 4; c++){
+        coloum = document.createElement('td');
+        coloum.appendChild(document.createTextNode(lecture[r][c]));
+        row.appendChild(coloum);
+    }
+    table.appendChild(row);
+   }
+  }
+
     }
    
    
@@ -187,6 +202,7 @@ function updateLectures(sortedList){
   table.innerHTML= "";
   for(r=0; r< lecture.length; r++){
     row = document.createElement('tr');
+    row.className = "forceWhite";
     if(sortedList[r][0] == "Dan Smith"){
         row.onclick = function(){
            bttn = document.getElementById("test");
