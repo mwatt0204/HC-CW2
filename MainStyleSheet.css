@@ -2,7 +2,7 @@
 body {
   padding-top: 5rem;
 
-  background-color: gray;
+  background-color:whitesmoke;
 
 }
 .search {
@@ -73,6 +73,8 @@ img.logo {
   text-align: left;
   align-items: left;
   position: relative;
+  color: white;
+  background-color: #1a68ce;
 }
 
 #fuzzySearch {
@@ -119,16 +121,22 @@ img.logo {
 #campusMapButton {
   margin: 10px;
   margin-left: 0px;
+  background-color:  #1a68ce;
+  color: white;
 }
 
 #findLecturerButton {
   margin: 10px;
   margin-left: 0px;
+  background-color:  #1a68ce;
+  color: white;
 }
 
 #covid {
   margin: 10px;
   margin-left: 0px;
+    background-color: red;
+  color: white;
 }
 
 .h3 {
@@ -310,7 +318,6 @@ img.logo {
     font-weight:600
   }
 }
-
 
 
 
