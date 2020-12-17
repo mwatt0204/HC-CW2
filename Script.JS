@@ -12,7 +12,7 @@ var lib =  ["BlackBoard","Find My Lectuer","COVID-19","Campus Map","News","Evisi
 "COVID Advice for HSC Students on Campus","Prizes & Awards","Norwich Medical School","Library","People and Culture","Research and Innovation","Safety Services",
 "Sport and Commercial Services","Student and Academic Services","Student Services","Faith Centre","Learning and Teaching"];
 
-var lecture = [["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Bart","SCI","anotherEmial@uea.ac.uk","8.234"],]
+var lecture = [["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Lisa","SCI","anotherEmial@uea.ac.uk","8.234"],["Edwin","CMP","dansemail@uea.ac.uk","2.07"],["somePerson","CMP","someempail@uea.ac.uk","8.94"],["Bart","SCI","anotherEmial@uea.ac.uk","2.29"]["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Lisa","SCI","anotherEmial@uea.ac.uk","8.234"],["Edwin","CMP","dansemail@uea.ac.uk","2.07"],["somePerson","CMP","someempail@uea.ac.uk","8.94"],["Bart","SCI","anotherEmial@uea.ac.uk","2.29"]["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Lisa","SCI","anotherEmial@uea.ac.uk","8.234"],["Edwin","CMP","dansemail@uea.ac.uk","2.07"],["somePerson","CMP","someempail@uea.ac.uk","8.94"],["Bart","SCI","anotherEmial@uea.ac.uk","2.29"]["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Lisa","SCI","anotherEmial@uea.ac.uk","8.234"],["Edwin","CMP","dansemail@uea.ac.uk","2.07"],["somePerson","CMP","someempail@uea.ac.uk","8.94"],["Bart","SCI","anotherEmial@uea.ac.uk","2.29"]]
 
 
 
@@ -135,29 +135,15 @@ function showAvailableDates(){
 
 
 function fuzzySearchLeacture(x){
-  table = document.getElementById("TableBody");
-  table.innerHTML= "";
-       if(x.value != ''){
-       for(r=0; r< lecture.length; r++){
+    
+    sortedLecturers = [];
+    for(r=0; r< lecture.length; r++){
         if(lecture[r][0].toLocaleLowerCase().includes(x.value.toLocaleLowerCase())){
-            row = document.createElement('tr');
-            header = document.createElement('th');
-            header.scope = "row";
-            header.appendChild(document.createTextNode(r));
-            row.appendChild(header);
-            for(c = 0; c < 4; c++){
-                coloum = document.createElement('td');
-                coloum.appendChild(document.createTextNode(lecture[r][c]));
-                row.appendChild(coloum);
-            }
-            table.appendChild(row);
+        sortedLecturers.push(lecture[r]);
         }
-        }
-        }
-        else{
-            getLectueres();
-        }
-       }
+    }
+        updateLectures(sortedLecturers);
+    }
    
    
    
@@ -195,9 +181,7 @@ function updateLectures(sortedList){
         };
     }
     header = document.createElement('th');
-    header.scope = "row";
-    header.appendChild(document.createTextNode(r));
-    row.appendChild(header);
+
     for(c = 0; c < 4; c++){
         coloum = document.createElement('td');
         coloum.appendChild(document.createTextNode(sortedList[r][c]));
