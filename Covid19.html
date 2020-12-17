@@ -29,25 +29,66 @@
   <body onload="showAvailableDates()"> 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="nav-link" href="Home2.html"><img class="logo" src="ueaLogo.png" alt="UEA Logo" height="30"></a>
+      <a class="nav-link" href="#"><img class="logo" src="ueaLogo.png" alt="UEA Logo" height="30"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     
       <div class="collapse navbar-collapse" id="myNavbar">
+
+        
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="Covid19.html">COVID-19</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              News
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Latest News</a>
+              <a class="dropdown-item" href="#">Staff</a>
+              <a class="dropdown-item" href="#">Student</a>
+              <a class="dropdown-item" href="#">Notices</a>
+            </div>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="FindMyLecture.html">Find Lecturer</a>
-          </li>
-        </ul>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            COVID-19
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="#">Book a Test</a>
+            <a class="dropdown-item" href="#">How lateral testing works</a>
+            <a class="dropdown-item" href="#">Travelling after testing</a>
+            <a class="dropdown-item" href="#">Lateral Testing FAQs</a>
+            <a class="dropdown-item" href="#">Frequently Asked Questions</a>
+            <a class="dropdown-item" href="#">Step-by-btep guides</a>
+            <a class="dropdown-item" href="#">Consent Stetment</a>
+            <a class="dropdown-item" href="#">Privacy Notice</a>
+            <a class="dropdown-item" href="#">Conmnecting to the VPN</a>
+          </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Help Me With
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Introduction to MY.UEA</a>
+            <a class="dropdown-item" href="#">My Wellbeing</a>
+            <a class="dropdown-item" href="#">Being a New Student</a>
+            <a class="dropdown-item" href="#">Being a New Staff Member</a>
+            <a class="dropdown-item" href="#">Learning</a>
+          </div>
+        </li>
+      </ul>
+
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+         <div id="topSearch">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="navSearch" onkeyup="fuzzySearch2(this)">
+        <div id="dropDown2"></div> 
+        </div>
         </form>
-        <button class="moonButton" data-toggle="tooltip" data-placment="bottom" title="toggal dark mode" type="button">
+        <button class="moonButton" data-toggle="tooltip" data-placment="bottom" title="toggal dark mode" type="button" onclick="togglecss()">
           <i class="fas fa-moon"></i>
           <span></span>
         </button>
