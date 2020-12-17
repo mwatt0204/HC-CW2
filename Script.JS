@@ -39,7 +39,16 @@ function fuzzySearch(x){
     }
 }
 
+function togglecss(){
+  var a = document.getElementById("style1");
+  a.x = 'MainStyleSheet' == a.x ? 'DarkMOdeStyleSheet' : 'MainStyleSheet'; // short if
+  a.href = a.x + '.css';
+}
 
+
+function test(){
+    alert("test");
+}
 
 function fuzzySearch2(x){
     list = document.getElementById("dropDown2");
@@ -74,6 +83,9 @@ function fuzzySearch2(x){
         }
        }
    }
+
+
+
 
 
 
