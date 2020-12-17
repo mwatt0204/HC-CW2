@@ -19,6 +19,12 @@ border: none;
 cursor: pointer;
 }
 
+.sunButton{
+  background-color: transparent; 
+  border: none;
+  cursor: pointer;
+  }
+
 #dropDown {
   display: block;
   text-align: left;
