@@ -118,26 +118,7 @@ img.logo {
   min-width: 105px;
 }
 
-#campusMapButton {
-  margin: 10px;
-  margin-left: 0px;
-  background-color:  #1a68ce;
-  color: white;
-}
 
-#findLecturerButton {
-  margin: 10px;
-  margin-left: 0px;
-  background-color:  #1a68ce;
-  color: white;
-}
-
-#covid {
-  margin: 10px;
-  margin-left: 0px;
-    background-color: red;
-  color: white;
-}
 
 .h3 {
   text-align: centre;
@@ -319,5 +300,19 @@ img.logo {
   }
 }
 
+.fa-search {
+  color: white;
+  padding: 2px;
+}
 
+.fa-moon {
+  color: white;
+}
 
+#submitButton {
+  margin: 10px;
+}
+
+#showAllButton {
+  margin: 5px;
+}

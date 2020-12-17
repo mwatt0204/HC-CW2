@@ -86,7 +86,12 @@
         </li>
       </ul>
       
+      
+        
+        
+      </button>
         <form class="form-inline my-2 my-lg-0">
+          <i class="fas fa-search"></i>
          <div id="topSearch">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="navSearch" onkeyup="fuzzySearch2(this)">
         <div id="dropDown2"></div> 
@@ -111,8 +116,10 @@
       Below you can find a tabel which cnontins all the lectuers and members of staff that could be of help to, this also has their email and their office and school. it is also able to search for a indervidal lecture
 </p>
       <p class="h2" style="text-align: center;">Lecturers</p>
-      <button>show all on one page</button>
-      <div id="FindMyLectureTable" style="text-align: center">
+      <button type="button" class="btn btn-primary"  id = "findLecturerButton">
+        Show all items on one page
+      </button>
+      <div id="showAllButton" style="text-align: center">
         <table class="table table-hover">
             <thead>
               <tr>
@@ -150,7 +157,9 @@
            </tbody>
           </table>
 
-          <button>LoadMore</button>
+          <button type="button" class="btn btn-primary"  id = "findLecturerButton">
+            Load More
+          </button>
           <div>
             <p>
             Pev<< 2 3 4 5 6 7 8 9 10 ... 120 >>Next
