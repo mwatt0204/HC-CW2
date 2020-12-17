@@ -1,4 +1,16 @@
-var lib =  ["BlackBoard","Find My Lectuer","COVID-19","Campus Map","News","Evisoin","Outlook","Home"];
+var lib =  ["BlackBoard","Find My Lectuer","COVID-19","Campus Map","News","Evision","Outlook","Home","News","UEA Vacancies","Latest News","Staff","Students",
+"How lateral testing works","Travelling after testing","Lateral Testing FAQs","COVID-19 Lateral Testing","COVID Testing - Placement Student","COVID Testing Steps",
+"Introduction to My.UEA","My Wellbeing","Being a New Student","Being a New Staff Member","Learning","IT Support","Learning Policies and Regulations","UEA Jargon and Acronyms",
+"Events","Listings","Vice-Chancellor's Office","Vice-Chancellor","The Executive Team","Chancellor","University Strucutre","UEA 2030 Vision","Teaching Fellows",
+"Faculties and Schools","Faculty of Arts and Humanities","Faculty of Medicine and Health Sciences","Graduate School","School of Art, Media and American Studies",
+"Interdisciplinary Institute for the Humanities","School of Literature, Drama and Creative Writing","School of History","School of Politics, Philosophy, Language and Communication Studies",
+"HUM Research Ethics Committee","Faculty Research","Strategic Plans, Roles and Staff Guides","Faculty funding opportunities","Research Community and Facilities",
+"Personal and Professional Development","News and Events","LDC News and Announcements","LDC Events","History Students","History Staff","Policy@UEA","Welcome to the School",
+"Faculty Support","Research News","Fellowships","UEA Archives and Collections Visiting Fellowships","Faculty plans","Faculty roles","Faculty staff guides",
+"Support for Research","Social Sciences Staff","Equality & Diversity","Committee","Career Development Opportunities","Research Mentoring","Log an IT Call",
+"Campus Map","HSC Administrative Team","The Workforce Hub","Technical Staff","New Students & Apprentices","Pre-registration Master's & TNAs","Post-registration, postgraduate and further studies",
+"COVID Advice for HSC Students on Campus","Prizes & Awards","Norwich Medical School","Library","People and Culture","Research and Innovation","Safety Services",
+"Sport and Commercial Services","Student and Academic Services","Student Services","Faith Centre","Learning and Teaching"];
 
 var lecture = [["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP","someempail@uea.ac.uk","8.234"],["Bart","SCI","anotherEmial@uea.ac.uk","8.234"],]
 
@@ -6,11 +18,13 @@ var lecture = [["Dan Smith","CMP","dansemail@uea.ac.uk","2.37"],["lecture","CMP"
 
 
 function fuzzySearch(x){
- list = document.getElementById("dropDown");
+    fuzzyItems = 0;
+    list = document.getElementById("dropDown");
     list.innerHTML='';
     if(x.value != ''){
-    for(i=0; i< lib.length; i++){
-     if(lib[i].toLowerCase().includes(x.value.toLowerCase())){
+    for(i=0; i < lib.length; i++){
+     if(lib[i].toLowerCase().includes(x.value.toLowerCase()) && fuzzyItems < 10){
+         fuzzyItems++;
  //        alert("yes");
          li = document.createElement('button');
          li.className = "result"
