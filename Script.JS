@@ -53,11 +53,26 @@ function fuzzySearch(x){
     }
 }
 
-function togglecss(){
-  var a = document.getElementById("style1");
-  a.x = 'MainStyleSheet' == a.x ? 'DarkMOdeStyleSheet' : 'MainStyleSheet'; // short if
-  a.href = a.x + '.css';
+function togglecssLight(){
+    var a = document.getElementById("style1");
+    a.x = 'MainStyleSheet' == a.x ? 'DarkModeStyleSheet' : 'MainStyleSheet'; // short if
+    a.href = a.x + '.css';
+    icon = document.getElementById("sunButton");
+    icon.hidden = false;
+    icon = document.getElementById("moonButton");
+    icon.hidden = true;
 }
+
+function togglecssDark(){
+    var a = document.getElementById("style1");
+    a.x = 'MainStyleSheet' == a.x ? 'DarkModeStyleSheet' : 'MainStyleSheet'; // short if
+    a.href = a.x + '.css';
+    icon = document.getElementById("moonButton");
+    icon.hidden = false;
+    icon = document.getElementById("sunButton");
+    icon.hidden = true;
+}
+
 
 
 function test(){
