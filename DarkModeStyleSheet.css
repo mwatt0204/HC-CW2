@@ -348,3 +348,21 @@ h3{
 .fa-sun {
   color: white;
 }
+
+#campusMapButton {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
+}
+
+#findLecturerButton {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
+}
+
+#covid {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
+}

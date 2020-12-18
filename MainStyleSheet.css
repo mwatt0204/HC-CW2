@@ -124,7 +124,23 @@ img.logo {
   min-width: 105px;
 }
 
+#campusMapButton {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
+}
 
+#findLecturerButton {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
+}
+
+#covid {
+  padding-top: 5px;
+  margin:5px;
+  min-width: 105px;
+}
 
 .h3 {
   text-align: centre;
@@ -327,3 +343,6 @@ img.logo {
   margin: 5px;
 }
 
+#TableBody {
+  max-width: 90%;
+}
