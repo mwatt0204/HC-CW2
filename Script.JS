@@ -137,8 +137,10 @@ function showAvailableDates(){
     if(date2.getTime() == testDate.getTime() || date2.getTime() == testDate2.getTime()){
         times.disabled = false;
         document.getElementById("placeholdertextforTime").innerHTML ="Please Select a avalibal Time";
+        document.getElementById("booknowButton").disabled = false;
     }
     else{
+        document.getElementById("booknowButton").disabled = true;
      document.getElementById("times").disabled = true;
      document.getElementById("placeholdertextforTime").innerHTML ="No times Avalibale on Selected Dates";
      times.value = "No times Avalibale on Selected Dates";
