@@ -53,7 +53,7 @@ function fuzzySearch(x){
 
 function togglecssLight(){
     var a = document.getElementById("style1");
-    a.x = 'MainStyleSheet' == a.x ? 'DarkModeStyleSheet' : 'MainStyleSheet'; // short if
+    a.x = 'MainStyleSheet' == a.x ? './scripts/DarkModeStyleSheet' : './scripts/MainStyleSheet'; // short if
     a.href = a.x + '.css';
     icon = document.getElementById("sunButton");
     icon.hidden = false;
@@ -63,7 +63,7 @@ function togglecssLight(){
 
 function togglecssDark(){
     var a = document.getElementById("style1");
-    a.x = 'MainStyleSheet' == a.x ? 'DarkModeStyleSheet' : 'MainStyleSheet'; // short if
+    a.x = 'MainStyleSheet' == a.x ? './scripts/DarkModeStyleSheet' : './scripts/MainStyleSheet'; // short if
     a.href = a.x + '.css';
     icon = document.getElementById("moonButton");
     icon.hidden = false;

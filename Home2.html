@@ -12,21 +12,20 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link id="style1" href="MainStyleSheet.css" rel="stylesheet">
+    <link rel= "stylesheet" id="style1" type= "text/css" href= "{{ url_for('static',filename='styles/MainStyleSheet.css') }}">
 
-
-    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
-    
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/fontawesome-free-5.15.1-web/css/all.css') }}">
 
     
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="Script.JS"></script>
+    <script src="{{ url_for('static',filename='scripts/Script.JS') }}"></script>
 
   </head>
 
@@ -34,81 +33,83 @@
 
     
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="nav-link" href="Home2.html"><img class="logo" src="ueaLogo.png" alt="UEA Logo" height="30"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="myNavbar">
+    <body onload="showAvailableDates()"> 
 
-        
-        <ul class="navbar-nav mr-auto">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="nav-link" href="Home2.html"><img class="logo" src="{{ url_for('static',filename='styles/ueaLogo.png') }}" alt="UEA Logo" height="30"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="myNavbar">
+  
+          
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                News
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <a class="dropdown-item" href="#">Latest News</a>
+                <a class="dropdown-item" href="#">Staff</a>
+                <a class="dropdown-item" href="#">Student</a>
+                <a class="dropdown-item" href="#">Notices</a>
+              </div>
+            </li>
+  
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              News
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              COVID-19
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Latest News</a>
-              <a class="dropdown-item" href="#">Staff</a>
-              <a class="dropdown-item" href="#">Student</a>
-              <a class="dropdown-item" href="#">Notices</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+              <a class="dropdown-item" href="Covid19.html">Book a Test</a>
+              <a class="dropdown-item" href="#">How lateral testing works</a>
+              <a class="dropdown-item" href="#">Travelling after testing</a>
+              <a class="dropdown-item" href="#">Lateral Testing FAQs</a>
+              <a class="dropdown-item" href="#">Frequently Asked Questions</a>
+              <a class="dropdown-item" href="#">Step-by-btep guides</a>
+              <a class="dropdown-item" href="#">Consent Stetment</a>
+              <a class="dropdown-item" href="#">Privacy Notice</a>
+              <a class="dropdown-item" href="#">Conmnecting to the VPN</a>
             </div>
           </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            COVID-19
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-            <a class="dropdown-item" href="Covid19.html">Book a Test</a>
-            <a class="dropdown-item" href="#">How lateral testing works</a>
-            <a class="dropdown-item" href="#">Travelling after testing</a>
-            <a class="dropdown-item" href="#">Lateral Testing FAQs</a>
-            <a class="dropdown-item" href="#">Frequently Asked Questions</a>
-            <a class="dropdown-item" href="#">Step-by-btep guides</a>
-            <a class="dropdown-item" href="#">Consent Stetment</a>
-            <a class="dropdown-item" href="#">Privacy Notice</a>
-            <a class="dropdown-item" href="#">Conmnecting to the VPN</a>
-          </div>
-        </li>
-
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Help Me With
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Introduction to MY.UEA</a>
-            <a class="dropdown-item" href="#">My Wellbeing</a>
-            <a class="dropdown-item" href="#">Being a New Student</a>
-            <a class="dropdown-item" href="#">Being a New Staff Member</a>
-            <a class="dropdown-item" href="#">Learning</a>
-          </div>
-        </li>
-      </ul>
-      
-      
+  
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Help Me With
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+              <a class="dropdown-item" href="#">Introduction to MY.UEA</a>
+              <a class="dropdown-item" href="#">My Wellbeing</a>
+              <a class="dropdown-item" href="#">Being a New Student</a>
+              <a class="dropdown-item" href="#">Being a New Staff Member</a>
+              <a class="dropdown-item" href="#">Learning</a>
+            </div>
+          </li>
+        </ul>
         
         
-      </button>
-        <form class="form-inline my-2 my-lg-0">
-          <i class="fas fa-search"></i>
-         <div id="topSearch">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="navSearch" onkeyup="fuzzySearch2(this)">
-        <div id="dropDown2"></div> 
+          
+          
+        </button>
+          <form class="form-inline my-2 my-lg-0">
+            <i class="fas fa-search"></i>
+           <div id="topSearch">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="navSearch" onkeyup="fuzzySearch2(this)">
+          <div id="dropDown2"></div> 
+          </div>
+          </form>
+          <button hidden class="sunButton" data-toggle="tooltip" id="sunButton" data-placment="bottom" title="toggal dark mode" type="button" onclick="togglecssDark()">
+            <i class="fas fa-moon"></i>
+            <span></span>
+          </button>
+          <button class="moonButton" data-toggle="tooltip" id="moonButton" data-placment="bottom" title="toggal dark mode" type="button" onclick="togglecssLight()">
+            <i class="fas fa-sun" style="font-size:24px"></i>
+            <span></span>
+          </button>
         </div>
-        </form>
-        <button hidden class="sunButton" data-toggle="tooltip" id="sunButton" data-placment="bottom" title="toggal dark mode" type="button" onclick="togglecssDark()">
-          <i class="fas fa-moon"></i>
-          <span></span>
-        </button>
-        <button class="moonButton" data-toggle="tooltip" id="moonButton" data-placment="bottom" title="toggal dark mode" type="button" onclick="togglecssLight()">
-          <i class="fas fa-sun" style="font-size:24px"></i>
-          <span></span>
-        </button>
-      </div>
-    </nav>
+      </nav>
     
    
 
@@ -157,9 +158,9 @@
         <section class="row clearfix">
           <div class="col-sm-4">
             <div class="card">
-              <img class="card-img-top" src="safetyFirst.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{ url_for('static',filename='styles/safetyFirst.jpg') }}" alt="Card image cap">
               <div class="card-body">
-                <h5 style="color: black;" class="card-title">COVID-19 Update</h5>
+                <h4 style="color: black;" class="card-title">COVID-19 Update</h4>
                 <p style="color: black;">11 Dec 2020</p>
                 <p style="color: black;" class="card-text">Please read for an update on case numbers, a reminder on safety measures and what the University is doing to support students in self-isolation.</p>
                 <a href="#" class="btn btn-primary">Read more</a>
@@ -168,10 +169,10 @@
           </div>
           <div class="col-sm-4">
             <div class="card">
-              <img class="card-img-top" src="wellbeing.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{ url_for('static',filename='styles/wellbeing.jpg') }}" alt="Card image cap">
               <div class="card-body">
                 <p style="color:black;">08 Dec 2020</p>
-                <h5 style="color: black;" class="card-title">Spotlight on accessing Wellbeing Services</h5>
+                <h4 style="color: black;" class="card-title">Spotlight on accessing Wellbeing Services</h4>
                 <p style="color:black" class="card-text">Now perhaps more than ever, it’s important that we prioritise our mental health. Read Pharmacy student Arj’s story of accessing Wellbeing services at UEA.</p>
                 <a href="#" class="btn btn-primary">Read more</a>
               </div>
@@ -179,10 +180,10 @@
           </div>
           <div class="col-sm-4">
             <div class="card">
-              <img class="card-img-top" src="winter.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{ url_for('static',filename='styles/winter.jpg') }}" alt="Card image cap">
               <div class="card-body">
                 <p style="color: black;">08 Dec 2020</p>
-                <h5 style="color: black;" class="card-title">Winter Warmth launch</h5>
+                <h4 style="color: black;" class="card-title">Winter Warmth launch</h4>
                 <p style="color: black;" class="card-text">Now perhaps more than ever, it’s important that we prioritise our mental health. Read Pharmacy student Arj’s story of accessing Wellbeing services at UEA.</p>
                 <a href="#" class="btn btn-primary">Read more</a>
               </div>
@@ -198,12 +199,12 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">
-            <h6>About</h6>
+            <h1>About</h1>
             <p class="text-justify">© UEA. All rights reserved. University of East Anglia, Norwich Research Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161</p>
           </div>
 
           <div class="col-xs-12 col-md-3" style="text-align: right;">
-            <h6>Get In Touch</h6>
+            <h1>Get In Touch</h1>
             <ul class="footer-links">
               <li><a href="">Accessibility</a></li>
               <li><a href="http://scanfcode.com/category/front-end-development/">Legal Statements</a></li>

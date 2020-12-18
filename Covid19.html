@@ -7,31 +7,32 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>COVID-19</title>
+    <title>My Dashboard</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link id="style1" href="MainStyleSheet.css" rel="stylesheet">
+    <link rel= "stylesheet" id="style1" type= "text/css" href= "{{ url_for('static',filename='styles/MainStyleSheet.css') }}">
 
-    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/fontawesome-free-5.15.1-web/css/all.css') }}">
 
     
-
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="Script.JS"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='scripts/Script.JS') }}"></script>
 
   </head>
 
   <body onload="showAvailableDates()"> 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="nav-link" href="Home2.html"><img class="logo" src="ueaLogo.png" alt="UEA Logo" height="30"></a>
+      <a class="nav-link" href="Home2.html"><img class="logo" src="{{ url_for('static',filename='styles/ueaLogo.png') }}" alt="UEA Logo" height="30"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,10 +42,10 @@
         
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               News
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <a class="dropdown-item" href="#">Latest News</a>
               <a class="dropdown-item" href="#">Staff</a>
               <a class="dropdown-item" href="#">Student</a>
@@ -57,7 +58,7 @@
             COVID-19
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-            <a class="dropdown-item" href="#">Book a Test</a>
+            <a class="dropdown-item" href="Covid19.html">Book a Test</a>
             <a class="dropdown-item" href="#">How lateral testing works</a>
             <a class="dropdown-item" href="#">Travelling after testing</a>
             <a class="dropdown-item" href="#">Lateral Testing FAQs</a>
@@ -71,10 +72,10 @@
 
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Help Me With
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
             <a class="dropdown-item" href="#">Introduction to MY.UEA</a>
             <a class="dropdown-item" href="#">My Wellbeing</a>
             <a class="dropdown-item" href="#">Being a New Student</a>
@@ -96,11 +97,11 @@
         </div>
         </form>
         <button hidden class="sunButton" data-toggle="tooltip" id="sunButton" data-placment="bottom" title="toggal dark mode" type="button" onclick="togglecssDark()">
-          <i class="fas fa-sun" style="font-size:24px"></i>
+          <i class="fas fa-moon"></i>
           <span></span>
         </button>
         <button class="moonButton" data-toggle="tooltip" id="moonButton" data-placment="bottom" title="toggal dark mode" type="button" onclick="togglecssLight()">
-          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun" style="font-size:24px"></i>
           <span></span>
         </button>
       </div>
@@ -115,7 +116,7 @@
      
 <div class="container">
   <h3>COVID-19 Symptom Checklist</h3>
-            <img src="covid19ImageNoBackground.png" class="img-fluid" alt="COVID-19 Syptoms" Align="center">
+            <img src="{{ url_for('static',filename='styles/covid19ImageNoBackground.png') }}" class="img-fluid" alt="COVID-19 Syptoms" Align="center">
             <!-- https://credder.com/article/22354/loss-of-smell-and-taste-validated-as-covid-19-symptoms -->
 </div>
 
@@ -186,30 +187,35 @@
   <form>
     <h3> Book a Test</h3>
     <div class="form-group row">
-      <label class="forceWhite" for="text" class="col-sm-2 col-form-label">Name</label>
+      <label class="forceWhite" for="text" class="col-sm-2 col-form-label" for="inputText">Name
       <div class="col-sm-10">
         <input type="text" class="form-control" id="inputText" placeholder="Name">
       </div>
+    </label>
     </div>
     <div class="form-group row">
-      <label class="forceWhite" for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <label class="forceWhite" for="inputEmail3" class="col-sm-2 col-form-label">Email
       <div class="col-sm-10">
         <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
       </div>
+    </label>
     </div>
     <div class="form-group row">
-      <label class="forceWhite" form="inputDate3" class="col-sm-2 col-form-label">Date</label>
+      <label class="forceWhite" form="inputDate3" class="col-sm-2 col-form-label">Date
       <div class="col-sm-10">
         <input type="date" class="dateselect" id="datefiled" placeholder="date" min="2020-12-22" max="2020-12-23" required="required" onchange="showAvailableDates()">
       </div>
+    </label>
     </div>
     
+    <label for="times"> Times
     <select class="custom-select mr-sm-2" id="times" disabled>
       <option id="placeholdertextforTime" selected>No Slots availble On Selected Date. Please Select a Free date first</option>
       <option value="1">09:50</option>
       <option value="2">12:40</option>
       <option value="3">15:30</option>
     </select>
+    </label>
   </form>
   <button class="btn btn-primary" data-toggle="modal" data-target="#bookTest" id="submitButton" onclick="simulateLoading()">Book Test Now</button>  
   
@@ -285,12 +291,12 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6">
-        <h6>About</h6>
+        <h1>About</h1>
         <p class="text-justify">© UEA. All rights reserved. University of East Anglia, Norwich Research Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161</p>
       </div>
 
       <div class="col-xs-12 col-md-3" style="text-align: right;">
-        <h6>Get In Touch</h6>
+        <h1>Get In Touch</h1>
         <ul class="footer-links">
           <li><a href="">Accessibility</a></li>
           <li><a href="http://scanfcode.com/category/front-end-development/">Legal Statements</a></li>
